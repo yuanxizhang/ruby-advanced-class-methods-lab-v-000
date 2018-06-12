@@ -63,7 +63,7 @@ class Song
   def self.create_from_filename(file)
     f = file.split(".").first
     artist = f.split(" - ").first.split(" ").join(" ")
-    song_name = f.split(" - ").last.
+    song_name = f.split(" - ").last.split(" ").join(" ")
     song = self.new(song_name, artist)
     song.name = song_name.strip
     binding.pry
