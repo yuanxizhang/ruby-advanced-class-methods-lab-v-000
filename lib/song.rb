@@ -81,3 +81,4 @@ end
 
 song = Song.new_from_filename("Taylor Swift - Blank Space.mp3")
 song.name
+song.artist_name
