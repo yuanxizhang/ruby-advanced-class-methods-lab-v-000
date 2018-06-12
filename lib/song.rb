@@ -48,6 +48,9 @@ class Song
     artist = f.split("-").first 
     song_name = f.split("-").last
     song = self.create_by_name(song_name)
+    song.name = song_name
+    song.artist_name = artist 
+    song
   end
 
   def save
