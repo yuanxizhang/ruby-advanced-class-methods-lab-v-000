@@ -38,6 +38,8 @@ class Song
       @@all.find {|song| song.name == name }
     end
   end
+  
+  def self.
 
   def save
     self.class.all << self
