@@ -20,7 +20,6 @@ class Song
   def self.new_by_name(name) 
     song = self.class.new(name)
     @name = name
-    @artist_name = artist_name
     self.save
     song
   end
