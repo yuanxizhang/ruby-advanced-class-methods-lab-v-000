@@ -7,8 +7,8 @@ class Song
     @artist_name = artist_name
   end
   
-  def self.create
-    song = Song.new
+  def self.create(name = nil, artist_name = nil)
+    
     @@all << song
   end  
 
