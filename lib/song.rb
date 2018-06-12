@@ -40,8 +40,13 @@ class Song
   end
   
   def self.alphabetical
-    @@all.sort_by {|song| song.name}  
+    @@all.sort_by {|song| song.name}
   end
+  
+  def self.new_from_filename(file)
+    f = file.split(".").pop
+    artist_and_song = f.split("-").first 
+    
 
   def save
     self.class.all << self
