@@ -10,9 +10,10 @@ class Song
   
   def self.create(name = nil, artist_name = nil)
     song = self.new
-    @name = name 
-    @artist_name = artist_name
-    self.all << song
+    song.name = name 
+    song.artist_name = artist_name
+    @@all << song
+    song
   end  
 
   def self.all
