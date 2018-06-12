@@ -62,7 +62,7 @@ class Song
   
   def self.create_from_filename(file)
     f = file.split(".").first
-    artist = f.split(" - ").first.rstrip
+    artist = f.split(" - ").first.gsub()
     song_name = f.split(" - ").last.lstrip
     song = self.new(song_name, artist)
     song.name = song_name.strip
