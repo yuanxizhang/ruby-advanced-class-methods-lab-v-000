@@ -52,11 +52,11 @@ class Song
   
   def self.new_from_filename(file)
     f = file.split(".").first
-    artist = f.split("-").first 
-    song_name = f.split("-").last
+    artist = f.split(" - ").first.strip 
+    song_name = f.split(" - ").last.strip
     song = self.new_by_name(song_name)
-    song.name = song_name
-    song.artist_name = artist 
+    song.name = song_name.strip
+    song.artist_name = artist.strip 
     song
   end
   
