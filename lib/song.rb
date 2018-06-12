@@ -45,8 +45,10 @@ class Song
   
   def self.new_from_filename(file)
     f = file.split(".").pop
-    artist_and_song = f.split("-").first 
-    
+    artist = f.split("-").first 
+    song_name = f.split("-").last
+    song = self.create_by_name(song_name)
+  end
 
   def save
     self.class.all << self
