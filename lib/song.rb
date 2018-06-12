@@ -53,7 +53,7 @@ class Song
     f = file.split(".").first
     artist = f.split("-").first 
     song_name = f.split("-").last
-    song = self.class.new_by_name(song_name)
+    song = self.new_by_name(song_name)
     song.name = song_name
     song.artist_name = artist 
     song
