@@ -65,9 +65,9 @@ class Song
     song_name = f.split(" - ").last.strip
     song = self.new(song_name, artist)
     song.name = song_name.strip
-    p song.name
+    binding.pry
     song.artist_name = artist.strip
-    p song.artist_name
+    binding.pry
     song.save
     song
   end
