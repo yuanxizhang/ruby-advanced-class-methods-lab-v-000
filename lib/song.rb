@@ -63,9 +63,7 @@ class Song
     f = file.split(".").first
     artist = f.split(" - ").first.strip
     song_name = f.split(" - ").last.strip
-    song = self.new
-    song.name = song_name
-    song.artist_name = artist
+    song = self.new(song_name, artist)
     song.save
     song
   end
