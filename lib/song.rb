@@ -10,7 +10,7 @@ class Song
     self.class.new 
   end
   
-  def self.create(name, artist_name) 
+  def self.create(name) 
     song = self.class.new(name, artist_name)
     @name = name
     @artist_name = artist_name
