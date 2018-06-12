@@ -44,7 +44,7 @@ class Song
   end
   
   def self.new_from_filename(file)
-    f = file.split(".").pop
+    f = file.split(".").first
     artist = f.split("-").first 
     song_name = f.split("-").last
     song = self.class.new_by_name(song_name)
